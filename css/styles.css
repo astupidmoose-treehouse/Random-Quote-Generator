@@ -4,7 +4,10 @@
  */
 
 body {
-  background-color: #36b55c;
+  background-color: #000;
+  background-image: url('../img/395716.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
   color: white;
   font-family: 'Playfair Display', serif;
 }
@@ -81,7 +84,7 @@ body {
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #36b55c;
+  background-color: #f2a900;
   padding: 15px 0;
   transition: .5s ;
 }
