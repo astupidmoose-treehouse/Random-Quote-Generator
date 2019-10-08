@@ -12,6 +12,10 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+a {
+  color: #FF9900;
+}
+
 #quote-box {
   position: absolute;
   top: 20%;
