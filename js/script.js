@@ -7,34 +7,40 @@ var quotes = [
       citation: "Bitcoin Blockchain",
       link: "https://blockchain.info/tx/4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b",
       year: 2009,
+      background: "img/1.jpg"
     },
     {
       quote: "If you don’t believe it or don’t get it, I don’t have the time to try to convince you, sorry.",
       source: "Satoshi Nakamoto",
       citation: "BitcoinTalk.org",
       link: "https://bitcointalk.org/index.php?topic=532.msg6306#msg6306",
-      year: 2010
+      year: 2010,
+      background: "img/2.jpg"
     },    
     {
       quote: "WikiLeaks has kicked the hornet’s nest, and the swarm is headed towards us.",
       source: "Satoshi Nakamoto",
       citation: "BitcoinTalk.org",
       link: "https://bitcointalk.org/index.php?topic=2216.msg29280#msg29280",
-      year: 2010
+      year: 2010,
+      background: "img/3.jpg"
     },
     {
       quote: "Lost coins only make everyone else’s coins worth slightly more.  Think of it as a donation to everyone.",
       source: "Satoshi Nakamoto",
       citation: "BitcoinTalk.org",
       link: "https://bitcointalk.org/index.php?topic=198.msg1647#msg1647",
-      year: 2010
+      year: 2010,
+      background: "img/4.jpg"
+
     },
     {
       quote: "In a few decades when the reward gets too small, the transaction fee will become the main compensation for [mining] nodes. I’m sure that in 20 years there will either be very large transaction volume or no volume.",
       source: "Satoshi Nakamoto",
       citation: "BitcoinTalk.org",
       link: "https://bitcointalk.org/index.php?topic=48.msg329#msg329",
-      year: 2010
+      year: 2010,
+      background: "img/5.jpg"
     },
   ]
 
@@ -68,11 +74,19 @@ function printQuote() {
   }
   html += '</p>';
   document.getElementById("quote-box").innerHTML = html;
+  document.body.style.background = "url(" + quoteObject.background + ") no-repeat";
+  document.body.style.backgroundSize = "cover";
 }
 
 // Call the function to print the initial quote
 
 printQuote();
+
+// Switch the quote automatically if 20 seconds has passed
+
+setInterval(function() {
+    printQuote()
+  }, 20000);
 
 /***
   When the "Show another quote" button is clicked, the event listener 
